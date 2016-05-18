@@ -7,6 +7,7 @@ import { ProductListComponent } from './products/product-list.component';
 import { ProductService } from './products/product.service';
 import { WelcomeComponent } from './home/welcome.component';
 import { ProductDetailComponent } from './products/product-detail.component';
+import { ContactComponent } from './contact/contact.component';
 
 @Component({
     selector: 'pm-app',
@@ -18,6 +19,7 @@ import { ProductDetailComponent } from './products/product-detail.component';
                 <ul class='nav navbar-nav'>
                     <li><a [routerLink]="['Welcome']">Home</a></li>
                     <li><a [routerLink]="['Products']">Product List</a></li>
+                    <li><a [routerLink]="['Contact']">Contact me</a></li>
                 </ul>
             </div>
         </nav>
@@ -34,7 +36,8 @@ import { ProductDetailComponent } from './products/product-detail.component';
 @RouteConfig([
     { path: '/welcome', name: 'Welcome', component: WelcomeComponent, useAsDefault: true },
     { path: '/products', name: 'Products', component: ProductListComponent },
-    { path: '/product/:id', name: 'ProductDetail', component: ProductDetailComponent }
+    { path: '/product/:id', name: 'ProductDetail', component: ProductDetailComponent },
+    { path: '/contact/', name: 'Contact', component: ContactComponent }
 ])
 export class AppComponent {
     pageTitle: string = 'Acme Product Management';
