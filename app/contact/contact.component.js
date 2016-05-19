@@ -1,4 +1,4 @@
-System.register(['angular2/core'], function(exports_1, context_1) {
+System.register(['angular2/core', './contact'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,18 +10,26 @@ System.register(['angular2/core'], function(exports_1, context_1) {
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1;
+    var core_1, contact_1;
     var ContactComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
+            },
+            function (contact_1_1) {
+                contact_1 = contact_1_1;
             }],
         execute: function() {
             ContactComponent = (function () {
                 function ContactComponent() {
                     this.pageTitle = 'Contact';
+                    this.model = new contact_1.Contact('nirjal@gmail.com', 'The long road to hell...');
+                    this.submitted = false;
                 }
+                ContactComponent.prototype.onSubmit = function () {
+                    this.submitted = true;
+                };
                 ContactComponent = __decorate([
                     core_1.Component({
                         templateUrl: 'app/contact/contact.component.html'

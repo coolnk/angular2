@@ -8,6 +8,7 @@ import { ProductService } from './products/product.service';
 import { WelcomeComponent } from './home/welcome.component';
 import { ProductDetailComponent } from './products/product-detail.component';
 import { ContactComponent } from './contact/contact.component';
+import { HighlightDirective } from './highlight.directive';
 
 @Component({
     selector: 'pm-app',
@@ -28,7 +29,7 @@ import { ContactComponent } from './contact/contact.component';
         </div>
      </div>
      `,
-    directives: [ROUTER_DIRECTIVES],
+    directives: [ROUTER_DIRECTIVES, HighlightDirective],    
     providers: [ProductService,
                 HTTP_PROVIDERS,
                 ROUTER_PROVIDERS]
@@ -40,5 +41,5 @@ import { ContactComponent } from './contact/contact.component';
     { path: '/contact/', name: 'Contact', component: ContactComponent }
 ])
 export class AppComponent {
-    pageTitle: string = 'Acme Product Management';
+    pageTitle: string = 'Nirjal Angular 2 application';
 }
