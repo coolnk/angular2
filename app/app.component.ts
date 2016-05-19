@@ -8,7 +8,7 @@ import { ProductService } from './products/product.service';
 import { WelcomeComponent } from './home/welcome.component';
 import { ProductDetailComponent } from './products/product-detail.component';
 import { ContactComponent } from './contact/contact.component';
-import { HighlightDirective } from './highlight.directive';
+
 
 @Component({
     selector: 'pm-app',
@@ -29,7 +29,7 @@ import { HighlightDirective } from './highlight.directive';
         </div>
      </div>
      `,
-    directives: [ROUTER_DIRECTIVES, HighlightDirective],    
+    directives: [ROUTER_DIRECTIVES],    
     providers: [ProductService,
                 HTTP_PROVIDERS,
                 ROUTER_PROVIDERS]

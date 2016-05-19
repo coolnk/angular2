@@ -1,10 +1,13 @@
 import { Component } from 'angular2/core';
 import { NgForm } from 'angular2/common';
-import { Contact } from './contact'; 
+import { Contact } from './contact';
+import { HighlightDirective } from '../highlight.directive'; 
 
 @Component({
-    templateUrl: 'app/contact/contact.component.html'
+    templateUrl: 'app/contact/contact.component.html',
+    directives: [HighlightDirective]
 })
+
 export class ContactComponent {
     public pageTitle: string = 'Contact';
     
